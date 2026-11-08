@@ -46,18 +46,18 @@
 @media(max-width:900px){.excavator-art{width:100%;max-width:650px}}
 @media(prefers-reduced-motion:reduce){.excavator-arm,.excavator-sign{animation:none!important;transform:none!important}}
 
-/* Cinemática articulada: lança, braço e caçamba giram em seus próprios pinos */
+/* Movimento mecânico contido: lança rígida, caçamba articulada e bloco depositado */
 .excavator-contact{min-height:0!important;overflow:visible;display:flex;justify-content:center}
 .excavator-art{width:120%;max-width:760px;height:auto;overflow:visible}
-.excavator-boom,.excavator-stick,.excavator-bucket,.excavator-sign{transform-box:view-box;animation-duration:10s!important;animation-timing-function:ease-in-out!important;animation-iteration-count:infinite!important}
-.excavator-boom{transform-origin:223px 205px;animation-name:exc-boom!important}
-.excavator-stick{transform-origin:306px 76px;animation-name:exc-stick!important}
-.excavator-bucket{transform-origin:496px 126px;animation-name:exc-bucket!important}
-.excavator-sign{transform-origin:642px 354px;animation-name:exc-load!important}
-@keyframes exc-boom{0%,12%,88%,100%{transform:rotate(-8deg)}28%,70%{transform:rotate(3deg)}48%,60%{transform:rotate(-3deg)}}
-@keyframes exc-stick{0%,12%,88%,100%{transform:rotate(14deg)}28%,70%{transform:rotate(-9deg)}48%,60%{transform:rotate(-2deg)}}
-@keyframes exc-bucket{0%,12%,88%,100%{transform:rotate(24deg)}22%{transform:rotate(-24deg)}30%,60%{transform:rotate(-40deg)}72%{transform:rotate(18deg)}}
-@keyframes exc-load{0%,12%{transform:translate(0,0)}26%{transform:translate(-28px,-10px)}38%,58%{transform:translate(-40px,-57px)}72%,100%{transform:translate(0,0)}}
+.excavator-boom,.excavator-stick,.excavator-bucket,.excavator-sign{transform-box:view-box;animation-duration:12s!important;animation-timing-function:cubic-bezier(.45,0,.55,1)!important;animation-iteration-count:infinite!important}
+.excavator-boom{transform-origin:223px 205px;animation-name:exc-boom-true!important}
+.excavator-stick{transform-origin:306px 76px;animation-name:exc-stick-true!important}
+.excavator-bucket{transform-origin:496px 126px;animation-name:exc-bucket-true!important}
+.excavator-sign{animation-name:exc-load-true!important}
+@keyframes exc-boom-true{0%,14%,84%,100%{transform:rotate(0deg)}34%,62%{transform:rotate(-3deg)}}
+@keyframes exc-stick-true{0%,14%,84%,100%{transform:rotate(0deg)}34%,62%{transform:rotate(5deg)}}
+@keyframes exc-bucket-true{0%,14%,84%,100%{transform:rotate(0deg)}25%,38%{transform:rotate(-11deg)}58%,67%{transform:rotate(-11deg)}80%{transform:rotate(0deg)}}
+@keyframes exc-load-true{0%,23%,83%,100%{transform:translate(0,0)}36%,64%{transform:translate(-6px,-19px)}72%{transform:translate(-3px,-9px)}}
 .excavator-svg-link{cursor:pointer}.excavator-svg-link:hover .excavator-sign rect{fill:#ffe44a}
 @media(max-width:900px){.excavator-art{width:100%}}
 @media(prefers-reduced-motion:reduce){.excavator-boom,.excavator-stick,.excavator-bucket,.excavator-sign{animation:none!important}}
