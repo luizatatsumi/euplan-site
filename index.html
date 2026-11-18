@@ -102,9 +102,9 @@ nav .brand-logo-full{display:block;width:auto;height:66px;max-width:min(39vw,350
 
 /* Serviços: quatro quadrantes editoriais expansíveis */
 .service-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
-.service-card{background:#242424;border:1px solid #3b3b3b;color:#fff;min-width:0;transition:background .25s,border-color .25s}
-.service-card:hover{border-color:#ffd600;background:#292929}
-.service-card[open]{border-color:#ffd600;background:#202020}
+.service-card{background:#202023;border:1px solid #363638;border-radius:22px;color:#fff;min-width:0;overflow:hidden;transition:background .25s,border-color .25s,box-shadow .25s}
+.service-card:hover{border-color:#b58c19;background:#252527}
+.service-card[open]{border-color:#ffd600;background:#202023;box-shadow:0 0 0 1px rgba(255,214,0,.18)}
 .service-card summary{list-style:none;cursor:pointer;padding:32px 34px 26px;display:flex;flex-direction:column;min-height:250px;outline-offset:4px}
 .service-card summary::-webkit-details-marker{display:none}
 .service-card-index{font-size:11px;letter-spacing:.18em;font-weight:800;color:#ffd600;margin-bottom:23px}
